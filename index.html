@@ -1,0 +1,129 @@
+<!-- https://github.com/tahsinAmin/Assignment_1_CSE391.git -->
+
+<!-- https://validator.w3.org/#validate_by_upload+with_options -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+     <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="index.css" />
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Righteous&display=swap" rel="stylesheet" />
+
+        <script type="text/javascript" src="quotes.js"></script>
+        <script type="text/javascript">
+            window.onload = init;
+            function init() {
+                generateQuote();
+            }
+
+            function generateQuote() {
+                const quoteSize = QUOTEBANK.length;
+                const randomIndex = Math.floor(Math.random()*quoteSize);
+                let randomQuoteData = QUOTEBANK[randomIndex];
+
+                document.getElementById("text").innerText = randomQuoteData.quote;
+                document.getElementById("author").innerText = "- " + randomQuoteData.author;
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="name">Muhammad Tahsin Amin</div>
+            <div class="menuItems">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="banner">
+                <div>
+                    <h2>Welcome To My Homepage!</h2>
+                    <h1>IT'S NICE TO MEET YOU</h1>
+                    <a href="#about">TELL ME MORE</a>
+                </div>
+            </div>
+            <section id="about">
+                <h1>About Me</h1>
+                <h2>Personal Info</h2>
+                <p>Hello! Myself Tahsin from Bangladesh. I'm doing my Undergraduate program from <u><b><a href="https://www.bracu.ac.bd/">BRAC University</a></b></u></p>
+                <h2>Hobbbies</h2>
+                <p>My hobby is to play <u><b><i><a href="https://www.facebook.com/watch/?v=2164583960489420" target="_blank">Basketball</a></i></b></u> and read <b><i>books</i></b>.</p>
+                <p>However, I'm unable to give more time on it since I have other stuffs to do as well. I like spending time with my <b><i>family</i></b> as well.</p>
+                <h2>Favourite Links</h2>
+                <a href="https://www.youtube.com/watch?v=Ma5tXjBjnDE"><i>Little girl pulls big sisters hair when she blows birthday candles</i></a><br/><br/>
+                <a href="https://www.youtube.com/watch?v=ODQchp8PiRY"><i>‘Butterfly baby’: Dad uses sweet pillow trick to wake up kid.</i></a>
+            </section>
+
+            <section id="quote">
+                <div id="text"></div>
+                <div id="author"></div>
+                <!-- &ldquo;Sucess isn't owned. It is leased, and rent is due everyday.&rdquo; - JJ Watts -->
+            </section>
+
+            <section id="gallery">
+                <img src="/img/a.jpg" alt=" A person playing Basketball">
+                <img src="/img/b.jpg" alt=" A person playing Basketball">
+                <img src="/img/c.jpg" alt=" A group of Basketball players">
+            </section>
+
+            <section class="tb">
+                <h1>Here's a random table</h1>
+                <table>
+                    <caption>NBA Most Valuable Player Award</caption>
+                    <tr>
+                        <th>Name</th><th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Bill Russell</td><td> won the award five times in his NBA career.</td>
+                    </tr>
+                    <tr>
+                        <td>Kareem Abdul-Jabbar</td><td> won the award a record-setting six times in his career.</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Jordna</td><td>won the award five times in his career.</td>
+                    </tr>
+                    <tr>
+                        <td>Lebron James</td><td> a four-time NBA MVP.</td>
+                    </tr>
+                    <tr>
+                        <td>Tim Duncan</td><td> won back-to-back Most Valuable Player awards in the '01-02 and '02-03 seasons.</td>
+                    </tr>
+                    <tr>
+                        <td>Derrick Rose</td><td> became the youngest player to ever win the award at age 22.</td>
+                    </tr>
+                    <tr>
+                        <td>Stephen Curry</td><td> won back-to-back MVP awards and was the first unanimous winner in the '15-16 season</td>
+                    </tr>
+                    <tr>
+                        <td>Giannis Antetokounmpo</td><td> the two-time reigning MVP.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="contact">
+                <h1>Contact</h1>
+                <p>Here are some inportant links of my contribution:</p>
+                <ul>
+                    <li><a href="https://github.com/tahsinAmin" target="_blank">Github</a></li>
+                    <li><a href="https://piazza.com/class/kg4k981ic375wl#" target="_blank">Piazza</a></li>
+                    <li><a href="https://codepen.io/tahsin09" target="_blank">Codepen</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <b>Last modified: <span id="demo"></span></b>
+        </footer>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function(){
+                var x = document.lastModified;
+                document.getElementById("demo").innerHTML = x;
+            });
+        </script>
+    </body>
+    </html>
